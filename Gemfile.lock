@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    hector-jekyll (0.0.1)
+      hector (>= 1.0.8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    eventmachine (1.0.3)
+    hector (1.0.8)
+      eventmachine (>= 0.12.10)
+    metaclass (0.0.1)
+    mocha (0.13.3)
+      metaclass (~> 0.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hector-jekyll!
+  mocha (= 0.13.3)
