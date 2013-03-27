@@ -15,8 +15,7 @@ module Hector
     end
 
     def normalize(username)
-      # TODO
-      username
+      username.strip.downcase
     end
   end
 end

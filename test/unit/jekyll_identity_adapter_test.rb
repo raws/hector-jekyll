@@ -15,8 +15,12 @@ class JekyllIdentityAdapterTest < Test::Unit::TestCase
     refute authenticate('sam', 'password')
   end
 
-  def test_identity_equality
-    skip 'not yet implemented'
+  def test_username_normalization
+    assert_equal 'sam', @jekyll.normalize('sam')
+    assert_equal 'sam', @jekyll.normalize('sam ')
+    assert_equal 'sam', @jekyll.normalize(' sam')
+    assert_equal 'sam', @jekyll.normalize('Sam')
+    assert_equal 'sam', @jekyll.normalize('SAM ')
   end
 
   private
