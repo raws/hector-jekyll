@@ -6,7 +6,7 @@ spec = Gem::Specification.new do |s|
   s.email = ['ross@rosspaffett.com']
   s.homepage = 'https://github.com/raws/hector-jekyll'
   s.summary = 'Multiple identity adapters for Hector'
-  s.description = 'A Hector extension which allows the use of multiple identity adapters'
+  s.description = 'A Hector extension which enables the use of multiple identity adapters'
   s.files = Dir['lib/**/*.rb']
   s.require_path = 'lib'
 
