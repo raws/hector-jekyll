@@ -2,12 +2,15 @@ hector-jekyll is a [Hector](https://github.com/sstephenson/hector) extension whi
 
 ### Installation and usage
 
-Install the [hector-jekyll gem](http://rubygems.org/gems/hector-jekyll) and require it in your Hector server's `init.rb`. Then assign an array of identity adapters to `Hector::Identity.adapter`:
+Install the [hector-jekyll gem](http://rubygems.org/gems/hector-jekyll) and require it in your Hector server's `init.rb`. Assign an instance of `Hector::JekyllIdentityAdapter` as Hector's identity adapter:
 
 ```ruby
-require 'hector-jekyll'
-Hector::Identity.adapter = [Hector::YamlIdentityAdapter.new, ...]
+require 'hector/jekyll'
+adapters = [Hector::YamlIdentityAdapter.new, Hector::ExpressionEngineIdentityAdapter.new, ...]
+Hector::Identity.adapter = Hector::JekyllIdentityAdapter.new(adapters)
 ```
+
+hector-jekyll will try to authenticate users against each identity adapter in turn.
 
 ### License <small>(MIT)</small>
 
