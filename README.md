@@ -1,3 +1,5 @@
+### The Strange Case of Dr. Jekyll and Mr. Hector
+
 hector-jekyll is a [Hector](https://github.com/sstephenson/hector) extension which enables the use of multiple identity adapters.
 
 ### Installation and usage
