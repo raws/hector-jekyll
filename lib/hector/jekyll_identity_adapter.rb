@@ -14,8 +14,16 @@ module Hector
       yield authenticated
     end
 
+    def forget(username)
+      # Do nothing
+    end
+
     def normalize(username)
       username.strip.downcase
+    end
+
+    def remember(username)
+      # Do nothing
     end
   end
 end
